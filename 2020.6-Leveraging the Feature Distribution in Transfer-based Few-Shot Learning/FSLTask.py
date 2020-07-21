@@ -37,6 +37,7 @@ def _load_pickle(file):
         print(dataset)
         # 这个数据压缩是真的蠢
         # 全套代码各种全局变量和重复运行的东西乱飞，代码结构混乱数据流不科学不可扩展，同效果不同场景的函数瞎替换，真的懒得看了。。。
+        # 疯狂吐槽相当一部分所谓Data scientist和Phd的代码功底，而且水文的习惯也真是够了，是真的菜=。=
         return dataset
 
 
