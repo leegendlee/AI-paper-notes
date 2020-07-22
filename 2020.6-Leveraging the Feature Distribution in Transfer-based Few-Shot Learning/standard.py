@@ -255,6 +255,9 @@ if __name__ == '__main__':
     lamda = 10
     model = GaussianModel(n_ways, lamda)
     # 这个model完全没有backbone，也没有从checkpoints加载模型，到底是个啥鬼=。=纯统计学模型？？？
+    # 文中所指的MAP 最大后验概率估计，其对数据的分布已经有了一个先验分布，而这个理念本身就有一定问题，因为当样本极其少的时候(1-shot)，怎么准确的得出先验分布呢
+    # 当然，MAP这种方法用在其他场景是不错的，包括幂变换本身也是，是修正数据分布的好方法
+    # 总体而言，本文的方法只是针对个别特定的数据集作出的优化，而非里程碑式的进步
     n_nfeat = ndatas.size(2)
     # n_nfeat = 100
     print(n_nfeat)
