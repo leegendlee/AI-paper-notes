@@ -85,7 +85,7 @@ class GaussianModel(Model):
         n_runs, n, m = M.shape
 
         # P=M
-        # 论文全篇都没提到以e为底的函数，哪来的我靠？
+        # 论文全篇都没提到以e为底的函数，哪来的我靠？找到了，在另外一篇文章里，具体忘记了
         # print(M)
         P = torch.exp(- self.lamda * M)
         # print(P)
